@@ -14,7 +14,9 @@ Tasks persist using local storage.
 - Right-click menu ( or, contextual menu ) for taking quick actions like Editing & Deleting Tasks 
 
 ## 🖥️ Demo : 
-[Live Demo](#) ([https://kiran-nyayapati.github.io/Kanbanify-App/])
+🔗 GitHub Repo: [ https://github.com/kiran-nyayapati/Kanbanify-App ]
+
+🔗 Live demo link: [ https://kiran-nyayapati.github.io/Kanbanify-App/ ]
 
 ## 🏗️ Tech Stack : 
     HTML - for Structure
