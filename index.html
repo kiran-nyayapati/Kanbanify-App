@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanbanify</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div>
+      <h1>Kanbanify</h1>
+    </div>
+    <div class="container">
+      <div class="kan-board" id="todo">
+        <h2>To Do <span class="task-counter" id="todo-counter">0</span></h2>
+        <div class="tasks" id="todo-tasks"></div>
+        <input
+          type="text"
+          class="task-input"
+          id="todo-input"
+          placeholder="Add a new task..."
+        />
+        <button class="add-task" onclick="addTask('todo')">Add Task</button>
+      </div>
+      <div class="kan-board" id="doing">
+        <h2>Doing <span class="task-counter" id="doing-counter">0</span></h2>
+        <div class="tasks" id="doing-tasks"></div>
+        <input
+          type="text"
+          class="task-input"
+          id="doing-input"
+          placeholder="Add a new task..."
+        />
+        <button class="add-task" onclick="addTask('doing')">Add Task</button>
+      </div>
+      <div class="kan-board" id="done">
+        <h2>Done <span class="task-counter" id="done-counter">0</span></h2>
+        <div class="tasks" id="done-tasks"></div>
+        <input
+          type="text"
+          class="task-input"
+          id="done-input"
+          placeholder="Add a new task..."
+        />
+        <button class="add-task" onclick="addTask('done')">Add Task</button>
+      </div>
+    </div>
+    <div class="popup-menu">
+      <ul>
+        <li onclick="editTask()">Edit</li>
+        <li onclick="deleteTask()">Delete</li>
+      </ul>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
