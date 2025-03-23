@@ -5,13 +5,15 @@ It allows users to add, edit, delete, and move tasks between "To Do," "Doing," a
 One can track number of tasks in each Boards. 
 Tasks persist using local storage. 
 
+💡🔨 Building this project helped me improve my JavaScript skills, especially working with Drag & Drop, DOM manipulation, Event Handling skills and finally local storage
+
 ## 🚀 Key Features : 
 - 📝 Add, Edit, and Delete Tasks to different boards
 - 🎨 Drag & Drop tasks between columns 
 - 💡 Sort Dragging & Dropping tasks within itself & across columns 
 - 💾 Saves tasks in local storage for persistence
 - 📊 Task Counter updates 
-- Right-click menu ( or, contextual menu ) for taking quick actions like Editing & Deleting Tasks 
+- 🔨Right-click menu ( or, contextual menu ) for taking quick actions like Editing & Deleting Tasks 
 
 ## 🖥️ Demo : 
 🔗 GitHub Repo: [ https://github.com/kiran-nyayapati/Kanbanify-App ]
