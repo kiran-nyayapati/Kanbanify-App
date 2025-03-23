@@ -13,7 +13,7 @@ Tasks persist using local storage.
 - 📊 Real-time task count updates
 
 ## 🖥️ Demo
-[Live Demo](#) (Add your hosted link here if available)
+[Live Demo](#) ([https://kiran-nyayapati.github.io/Kanbanify-App/])
 
 🏗️ Tech Stack
 
