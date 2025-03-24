@@ -126,4 +126,9 @@
     color: darkslategray;
     font-size: 12px;
   }
-  
+
+  @media screen and (max-width: 576px) {
+    .container {
+      width: 100%;
+    }
+  }
