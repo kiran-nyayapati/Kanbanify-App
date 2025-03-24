@@ -4,131 +4,169 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: "Playfair-Display", serif;
-    display: flex;
-    justify-content: center;
+body {
+  font-family: "Playfair-Display", serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222831;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: bolder;
+  color: limegreen;
+  /* tomato */
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.kan-board {
+  background-color: #2d3e55;
+  width: 300px;
+  min-height: 400px;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+}
+
+.kan-board h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.tasks {
+  min-height: 400px;
+}
+
+.task-input {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 4px;
+  border: 2px dotted #ccc;
+  margin-top: 10px;
+}
+
+.add-task {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 4px;
+  border: none;
+  background-color: indigo;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-task:hover {
+  background-color: blueviolet;
+}
+
+.card {
+  background-color: floralwhite;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  height: 4em;
+  border-left: 6px solid rgb(0, 123, 255);
+  color: darkslategray;
+  cursor: grab;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.task-counter {
+  color: darkslategray;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+
+  font-size: 1.2rem;
+  margin-left: 8px;
+  padding: 4px 8px;
+}
+
+.popup-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px 0;
+  border-radius: 4px;
+}
+
+.popup-menu ul li {
+  list-style: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.time {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: end;
+  display: block;
+  color: darkslategray;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    background-color: #222831;
-  }
-  
-  h1 {
-    font-size: 4em;
-    font-weight: bolder;
-    color: limegreen;
-    /* tomato */
-  }
-  
-  .container {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .kan-board {
-    background-color: #2d3e55;
-    width: 300px;
-    min-height: 400px;
-    padding: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    border-radius: 10px;
-  }
-  
-  .kan-board h2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
-  }
-  
-  .tasks {
-    min-height: 400px;
-  }
-  
-  .task-input {
-    width: 100%;
-    padding: 10px 5px;
-    border-radius: 4px;
-    border: 2px dotted #ccc;
-    margin-top: 10px;
-  }
-  
-  .add-task {
-    width: 100%;
-    padding: 10px 5px;
-    border-radius: 4px;
-    border: none;
-    background-color: indigo;
-    margin-top: 10px;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .add-task:hover {
-    background-color: blueviolet;
-  }
-  
-  .card {
-    background-color: floralwhite;
-    padding: 10px;
-    position: relative;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    height: 4em;
-    border-left: 6px solid rgb(0, 123, 255);
-    color: darkslategray;
-    cursor: grab;
-    transition: all 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .task-counter {
-    color: darkslategray;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-  
-    font-size: 1.2rem;
-    margin-left: 8px;
-    padding: 4px 8px;
-  }
-  
-  .popup-menu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    padding: 10px 0;
-    border-radius: 4px;
-  }
-  
-  .popup-menu ul li {
-    list-style: none;
-    padding: 8px 20px;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  .time {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    text-align: end;
-    display: block;
-    color: darkslategray;
-    font-size: 12px;
   }
 
-  @media screen and (max-width: 576px) {
-    .container {
-      width: 100%;
-    }
+  .kan-board {
+    width: 90%;
+    min-width: 280px;
+    margin-bottom: 20px;
   }
+
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .task-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .add-task {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .card {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .task-counter {
+    width: 20px;
+    height: 20px;
+    font-size: 1rem;
+  }
+
+  .popup-menu {
+    position: fixed;
+    max-width: 150px;
+  }
+}
